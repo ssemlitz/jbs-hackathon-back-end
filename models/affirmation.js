@@ -12,4 +12,6 @@ const affirmationSchema = new Schema({
   timestamps: true
 })
 
-const Affirmation = mongoose.model('Affirmation', affirmationSchema)
+const AffirmationRef = mongoose.model('Affirmation', affirmationSchema)
+
+export AffirmationRef

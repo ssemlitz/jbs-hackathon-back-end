@@ -2,11 +2,21 @@ import mongoose from 'mongoose'
 
 const Schema = mongoose.Schema
 
+const affirmationSchema = new Schema({
+  thankfulFor: {type: String, required: true},
+  thingsIDidWell: {type: String, required: true},
+  selfComp: {type: String, required: true},
+  selfComp2: {type: String, required: true},
+  author: {type: mongoose.Schema.Types.ObjectId, ref: "Profile"}
+}, {
+  timestamps: true
+})
+
 const profileSchema = new Schema({
   email: { type: String, required: true, lowercase: true, unique: true },
   name: String,
   photo: { type: String },
-  affirmations: [{ type: Schema.Types.ObjectId, ref: 'Affirmation' }]
+  affirmations: [affirmationSchema]
 },{
   timestamps: true,
 })
