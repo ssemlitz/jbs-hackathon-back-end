@@ -11,7 +11,8 @@ function index(req, res) {
 }
 
 function create(req, res) {
-  req.body.author = req.user.profile
+  req.body.owner = req.user.profile
+  console.log('reqbody owner', req.body.owner)
   Profile.findById(req.params.id)
   .then(profile => {
     profile.affirmations.push(req.body)

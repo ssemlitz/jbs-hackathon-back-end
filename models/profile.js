@@ -8,7 +8,7 @@ const affirmationSchema = new Schema({
   thankful3: {type: String, required: true},
   thingsIDidWell: {type: String, required: true},
   selfComp: {type: String, required: true},
-  selfComp2: {type: String, required: true},
+  selfComp2: {type: String},
   author: {type: mongoose.Schema.Types.ObjectId, ref: "Profile"}
 }, {
   timestamps: true
