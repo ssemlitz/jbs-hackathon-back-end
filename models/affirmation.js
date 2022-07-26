@@ -14,4 +14,4 @@ const affirmationSchema = new Schema({
 
 const AffirmationRef = mongoose.model('Affirmation', affirmationSchema)
 
-export AffirmationRef
+// export AffirmationRef
