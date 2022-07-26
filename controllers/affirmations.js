@@ -1,15 +1,5 @@
 import {Affirmation} from "../models/affirmation.js"
-
-function create(req, res) {
-  Affirmation.create(req.body)
-  .then(affirmation => {
-    res.json(affirmation)
-  })
-  .catch(err => {
-    console.log(err)
-    res.status(500).json({err: err.errmsg})
-  })
-}
+import { Profile } from "../models/profile.js"
 
 function index(req, res){
   Affirmation.find({})
@@ -57,7 +47,6 @@ function update(req, res) {
 }
 
 export {
-  create,
   index,
   deleteOne as delete,
   update
