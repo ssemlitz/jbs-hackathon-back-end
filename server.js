@@ -8,6 +8,7 @@ import { router as profilesRouter } from './routes/profiles.js'
 import { router as authRouter } from './routes/auth.js'
 
 
+
 import './config/database.js'
 
 const app = express()
